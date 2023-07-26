@@ -38,6 +38,4 @@ public class DepartmentServiceImp {
         departmentRepository.deleteById(id);
 
     }
-
-
 }

@@ -37,4 +37,9 @@ public class DepartmentController {
         departmentServiceImp.saveDepartment(department);
         return department;
     }
+    @DeleteMapping("/departments/{id}")
+    public String deleteDepartment(@PathVariable int id) {
+        departmentServiceImp.deleteDepartment(id);
+        return "Department with ID = " + id + " was deleted.";
+    }
 }
