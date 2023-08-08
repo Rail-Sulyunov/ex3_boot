@@ -1,6 +1,7 @@
 package com.example.ex3_boot.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -20,6 +21,7 @@ import jakarta.persistence.*;
 
         @Column(name = "email")
         private String email;
+
 
         public Details() {
         }

@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@NamedEntityGraph
 @Table(name = "departments")
 public class Department {
 

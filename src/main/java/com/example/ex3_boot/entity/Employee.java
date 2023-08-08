@@ -1,9 +1,11 @@
 package com.example.ex3_boot.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
-
+@NamedEntityGraph
 @Entity
 @Table(name = "employees")
+
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,8 +22,11 @@ public class Employee {
     @Column(name = "salary")
     private int salary;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL
+            , fetch = FetchType.LAZY)
     @JoinColumn(name = "details_id")
+
+    @JsonIgnoreProperties({"hibernateLazyInitializer"})
     private Details empDetails;
 
     public Employee() {

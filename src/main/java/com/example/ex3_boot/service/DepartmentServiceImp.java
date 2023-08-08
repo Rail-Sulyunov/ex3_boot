@@ -1,5 +1,6 @@
 package com.example.ex3_boot.service;
 
+
 import com.example.ex3_boot.entity.Department;
 import com.example.ex3_boot.repository.DepartmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,4 +39,5 @@ public class DepartmentServiceImp {
         departmentRepository.deleteById(id);
 
     }
+
 }
